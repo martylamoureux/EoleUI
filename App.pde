@@ -1,10 +1,47 @@
+/**
+ * <bUIApp is the base class for the EoleUI Library.</b>
+ * 
+ * @author Marty Lamoureux
+ * @version Beta
+ */
 public final class UIApp {
+  /**
+   * The currently displayed UIView
+   *
+   * @see UIView
+   */
   UIView view;
+  /**
+   * The Processing Applet
+   */
   PApplet applet;
+  /**
+   * The width of the window
+   */
   private int windowWidth;
+  /**
+   * The height of the window
+   */
   private int windowHeight;
+  
+  /**
+   * A list of saved views, referenced by string identifiers, in order to find
+   * more efficently a view.
+   *
+   * @see UIView
+   */
   HashMap<String, UIView> views = new HashMap<String, UIView>();
   
+  /**
+   * UIApp Constructor
+   *
+   * @param a
+   *    The Proccesing parent Applet
+   * @param w
+   *    The window width
+   * @param h
+   *    The window height
+   */
   public UIApp(PApplet a, int w, int h) {
     this.windowWidth = w;
     this.windowHeight = h;
