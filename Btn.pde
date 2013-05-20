@@ -65,10 +65,10 @@ public class UIButton extends UISizeableControl implements IUIControl {
       this.label.foreColor = this.textColor;
       applet.fill(this.backColor);
     }
-    if (this.view.getApp().isProcessing2())
-      applet.rect(x, y, width, height, 5);
-    else
-      applet.rect(x, y, width, height);
+    
+    
+
+    applet.rect(x, y, width, height, 5);
     
     // Drawing the Label on top
     this.label.draw();
