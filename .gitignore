@@ -1,4 +1,5 @@
-syntax: glob
-application.macosx/
+
 ProcessingUI.pde
-.git
+application.macosx/
+
+ProcessingUI.pde
