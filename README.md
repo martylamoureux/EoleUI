@@ -1,1 +1,4 @@
-Empty Readme... Really need to fill in one day !
+EoleUI - A Processing UI Library
+================================
+
+The README will be written soon... promised.
