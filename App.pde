@@ -50,37 +50,101 @@ public final class UIApp {
     a.smooth();
   }
   
+  /**
+   * Switch the displayed view
+   *
+   * @param view
+   *    The view to display
+   */
   public final void setView(UIView view) {
     view.setApp(this);
     this.view = view;
     this.view.show();
   }
   
+  /**
+   * Switch the displayed view using his identifier
+   *
+   * @param view
+   *    The view's identifier
+   *
+   * @see UIApp#addView(String, UIVIew)
+   */
   public final void setView(String viewName) {
     this.setView(views.get(viewName));
   }
   
+  /**
+   * Returns the currently displayed view
+   *
+   * @return The currently displayed view
+   *
+   * @see UIView
+   */
   public UIView getView() {
     return view;
   }
   
+  
+  
+  /**
+   * Returns the Processing Applet
+   *
+   * @return The PApplet of the application
+   */
   public PApplet getApplet() {
     return this.applet;
   }
   
-  public void addView(String n, UIView v) { views.put(n, v); }
+  /**
+   * Register a view using an identifier
+   * You will be able to switch to this view only using the identifier
+   *
+   * @param identifier
+   *    The view's identifier
+   * @param v
+   *    The registered view
+   *
+   * @see UIApp#setView(String)
+   */
+  public void addView(String identifier, UIView v) {
+    views.put(identifier, v);
+  }
   
+  /**
+   * Draw the current view
+   * This method must be called in your main file
+   * in the main draw() method
+   * e.g. "void draw() { app.draw() }"
+   */
   public void draw() {
     this.view.draw();
   }
   
+  /**
+   * Handle "MousePressed" events in the app
+   * This method must be called in your main file
+   * in the main mousePressed() method
+   * e.g. "void mousePressed() { app.mousePressed() }"
+   */
   public void mousePressed() {
     this.getView().mousePressed();
   }
   
+  /**
+   * Handle "MouseReleased" events in the app
+   * This method must be called in your main file
+   * in the main mouseReleased() method
+   * e.g. "void mouseReleased() { app.mouseReleased() }"
+   */
   public void mouseReleased() {
     this.getView().mouseReleased();
   }
   
+  /**
+   * Know if the running version of Processing is >= 2.0b
+   *
+   * @return true if the application is upper than 2.0b (false if it's not Processing 2)
+   */
   public boolean isProcessing2() { return (P3D == OPENGL); }
 }
