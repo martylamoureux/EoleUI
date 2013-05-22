@@ -81,14 +81,11 @@ class UIView {
       if (c instanceof UIButton)
       {
         UIButton btn = (UIButton) c;
-        if (!btn.isHovered())
-          continue;
         this.onButtonClickUp(btn);
       }
       else if (c instanceof UISlider) {
         UISlider slider = (UISlider) ctl;
-        if (slider.isDragging())
-          slider.drop();
+        slider.drop();
       }
     }
   }
