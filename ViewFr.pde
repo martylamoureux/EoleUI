@@ -2,7 +2,7 @@ public class UINestedFrame extends UIPositionnableControl implements IUIControl 
   
   public UIView view;
   
-  public UILabel(UIView view, int x, int y, UIView nestedView) {
+  public UINestedFrame(UIView view, int x, int y, UIView nestedView) {
     super(view);
     this.x = x;
     this.y = y;
@@ -21,8 +21,6 @@ public class UINestedFrame extends UIPositionnableControl implements IUIControl 
   
   public void reset() {
     resetControl();
-    min = 0;
-    max = 100;
-    value = 0;
+    this.view = null;
   }
 }
