@@ -6,6 +6,7 @@ public class UINestedFrame extends UIPositionnableControl implements IUIControl 
     super(view);
     this.x = x;
     this.y = y;
+    this.view.setApp(view.getApp());
     this.view = nestedView;
     this.view.offsetX = x;
     this.view.offsetY = y;

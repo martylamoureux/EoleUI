@@ -18,7 +18,7 @@ public class UILabel extends UIPositionnableControl implements IUIControl {
       applet.textFont(this.font);
     applet.fill(foreColor);
     applet.textAlign(anchor.horizontal, anchor.vertical);
-    applet.text(text,x,y);
+    applet.text(text,getX(),getY());
   }
   
   public void register() {

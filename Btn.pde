@@ -68,7 +68,7 @@ public class UIButton extends UISizeableControl implements IUIControl {
     
     
 
-    applet.rect(x, y, width, height, 5);
+    applet.rect(getX(), getY(), width, height, 5);
     
     // Drawing the Label on top
     this.label.draw();

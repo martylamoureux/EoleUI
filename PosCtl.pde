@@ -3,8 +3,8 @@ public class UIPositionnableControl extends UIControl {
   public int y = 0;
   public UIAnchor anchor = new UIAnchor();
   
-  public int getX() { return this.x; }
-  public int getY() { return this.y; }
+  public int getX() { return this.view.offsetX + this.x; }
+  public int getY() { return this.view.offsetY + this.y; }
   public UIAnchor getAnchor() { return this.anchor; }
   
   public void setX(int value) { this.x = value; }
