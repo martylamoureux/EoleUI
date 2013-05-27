@@ -67,6 +67,16 @@ public final class UIApp {
   }
   
   /**
+   * Switch the displayed view
+   *
+   * @param view
+   *    The view to display
+   */
+  public final void setView(UIView view) {
+    this.setView(view, false);
+  }
+  
+  /**
    * Switch the displayed view using his identifier
    *
    * @param view
@@ -78,6 +88,20 @@ public final class UIApp {
    */
   public final void setView(String viewName, boolean resetView) {
     this.setView(views.get(viewName));
+  }
+  
+  /**
+   * Switch the displayed view using his identifier
+   *
+   * @param view
+   *    The view's identifier
+   * @param resetView
+   *    if true, resets all controls of the view
+   *
+   * @see UIApp#addView(String, UIVIew)
+   */
+  public final void setView(String viewName) {
+    this.setView(viewName, false);
   }
   
   /**
