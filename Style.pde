@@ -6,6 +6,7 @@ public class UIStyle {
   
   public int borderColor = BLACK;
   public int borderWidth = 1;
+  public int borderRadius = 5;
   
   public int backgroundColor = WHITE;
   public int foregroundColor = BLACK;
@@ -36,7 +37,11 @@ public class UIDrawing {
     this.style = style;
   }
   
-  public static void rect() {
-    
+  private PApplet applet { return this.app.getApplet();
+  
+  public void rect(int x, int y) {
+    applet.fill(style.backgroundColor);
+    applet.stroke(style.borderColor);
+    applet.rect(x, y, style.width, style.height, style.borderRadius);
   }
 }
