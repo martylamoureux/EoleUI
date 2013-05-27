@@ -3,6 +3,9 @@ class UIView {
   public color backColor = #ffffff;
   public int focusId = 0;
   
+  public int offsetX = 0;
+  public int offsetY = 0;
+  
   boolean resetting = false;
   
   private ArrayList<IUIControl> controls = new ArrayList<IUIControl>();
