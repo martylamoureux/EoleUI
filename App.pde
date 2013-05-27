@@ -55,9 +55,13 @@ public final class UIApp {
    *
    * @param view
    *    The view to display
+   * @param resetView
+   *    if true, resets all controls of the view
    */
-  public final void setView(UIView view) {
+  public final void setView(UIView view, boolean resetView) {
     view.setApp(this);
+    if (resetView)
+      view.reset();
     this.view = view;
     this.view.show();
   }
@@ -67,10 +71,12 @@ public final class UIApp {
    *
    * @param view
    *    The view's identifier
+   * @param resetView
+   *    if true, resets all controls of the view
    *
    * @see UIApp#addView(String, UIVIew)
    */
-  public final void setView(String viewName) {
+  public final void setView(String viewName, boolean resetView) {
     this.setView(views.get(viewName));
   }
   
