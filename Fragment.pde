@@ -1,11 +1,11 @@
 public class UIFragment extends UIView implements IUIControl {
   
   public void register() {
-    this.view.addControl(this);
+    this.addControl(this);
   }
   
   public void reset() {
-    resetControl();
+    //resetControl();
     for (IUIControl c : controls)
       c.reset();
   }
