@@ -37,11 +37,11 @@ public class UIDrawing {
     this.style = style;
   }
   
-  private PApplet applet { return this.app.getApplet();
+  private PApplet applet() { return this.app.getApplet(); }
   
   public void rect(int x, int y) {
-    applet.fill(style.backgroundColor);
-    applet.stroke(style.borderColor);
-    applet.rect(x, y, style.width, style.height, style.borderRadius);
+    applet().fill(style.backgroundColor);
+    applet().stroke(style.borderColor);
+    applet().rect(x, y, style.width, style.height, style.borderRadius);
   }
 }
