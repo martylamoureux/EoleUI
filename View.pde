@@ -8,7 +8,7 @@ class UIView {
   
   boolean resetting = false;
   
-  private ArrayList<IUIControl> controls = new ArrayList<IUIControl>();
+  protected ArrayList<IUIControl> controls = new ArrayList<IUIControl>();
   
   public UIView() {
     this.setup();
